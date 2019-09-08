@@ -2,6 +2,8 @@
 
 docker-composeを利用してlaravelの開発環境を構築するためのテンプレートです。
 
+mac環境を想定しているのでlinuxなどその他環境では微調整が必要となります。
+
 ## 環境の起動
 
 ①コンテナの起動
@@ -36,7 +38,12 @@ docker-compose exec app composer create-project --prefer-dist laravel/laravel te
 
 ②カレントディレクトリに必要なファイルを移動
 ```bash
-docker-compose exec app rm -rf template/README.md && mv template/* . && mv template/.* . && rm -rf template 
+docker-compose exec app rm -rf template/README.md && rm -rf template/.gitignore && mv template/* . && mv template/.* . && rm -rf template 
 ```
 
+③ ブラウザで下記URLにアクセス
+
+```
+http://localhost/
+```
 
