@@ -1,5 +1,8 @@
 FROM php:7-fpm-alpine
 
+ARG UID
+
+RUN mkdir /.composer && chown -R $UID /.composer
 WORKDIR /var/www/app
 
 COPY php.ini /usr/local/etc/php/
