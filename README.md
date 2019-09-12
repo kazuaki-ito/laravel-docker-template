@@ -39,11 +39,7 @@ docker-compose exec app composer create-project --prefer-dist laravel/laravel te
 
 ②カレントディレクトリに必要なファイルを移動
 ```bash
-rm -rf template/README.md 
-rm -rf template/.gitignore 
-mv template/* . 
-mv template/.* . 
-rm -rf template 
+rm -rf template/README.md && rm -rf template/.gitignore && mv template/* . && mv template/.* . && rm -rf template 
 ```
 
 ③ ブラウザで下記URLにアクセス
