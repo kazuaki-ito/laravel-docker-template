@@ -8,6 +8,7 @@ mac環境を想定しているのでlinuxなどその他環境では微調整が
 
 ①コンテナの起動
 ```bash
+export UID=${UID}
 docker-compose up -d
 ```
 
@@ -38,7 +39,7 @@ docker-compose exec app composer create-project --prefer-dist laravel/laravel te
 
 ②カレントディレクトリに必要なファイルを移動
 ```bash
-docker-compose exec app rm -rf template/README.md && rm -rf template/.gitignore && mv template/* . && mv template/.* . && rm -rf template 
+rm -rf template/README.md && rm -rf template/.gitignore && mv template/* . && mv template/.* . && rm -rf template 
 ```
 
 ③ ブラウザで下記URLにアクセス
