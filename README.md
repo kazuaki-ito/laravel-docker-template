@@ -10,6 +10,8 @@ mac環境を想定しているのでlinuxなどその他環境では微調整が
 ```bash
 export UID=${UID}
 docker-compose up -d
+# 古い版で環境を作っている人はrecreateする
+# docker-compose up -d --force-recreate --build
 ```
 
 ②起動確認
